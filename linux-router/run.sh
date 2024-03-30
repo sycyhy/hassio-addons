@@ -73,4 +73,7 @@ fi
 EXTRA_ARGS+="--ban-priv "
 EXTRA_ARGS+="-g ${ADDRESS} "
 
-# ./lnxrouter --ap ${INTERFACE} ${SSID} --password ${PASSPHRASE} ${EXTRA_ARGS} ${USER_ARGS}
+echo "Running"
+
+./lnxrouter -i end0
+
