@@ -23,14 +23,14 @@ HIDE_SSID=$(jq --raw-output ".hide_ssid" $CONFIG_PATH)
 USER_ARGS=$(jq --raw-output ".address" $CONFIG_PATH)
 
 
-# Enforces required variables
-required_vars=(SSID PASSPHRASE CHANNEL ADDRESS)
-for required_var in "${required_vars[@]}"; do
-    if [[ -z ${!required_var} ]]; then
-        echo >&2 "Error: $required_var variable not set."
-        exit 1
-    fi
-done
+# # Enforces required variables
+# required_vars=(SSID PASSPHRASE CHANNEL ADDRESS)
+# for required_var in "${required_vars[@]}"; do
+#     if [[ -z ${!required_var} ]]; then
+#         echo >&2 "Error: $required_var variable not set."
+#         exit 1
+#     fi
+# done
 
 
 INTERFACES_AVAILABLE="$(ifconfig -a | grep '^wl' | cut -d ':' -f '1')"
@@ -73,4 +73,4 @@ fi
 EXTRA_ARGS+="--ban-priv "
 EXTRA_ARGS+="-g ${ADDRESS} "
 
-./lnxrouter --ap ${INTERFACE} ${SSID} --password ${PASSPHRASE} ${EXTRA_ARGS} ${USER_ARGS}
+# ./lnxrouter --ap ${INTERFACE} ${SSID} --password ${PASSPHRASE} ${EXTRA_ARGS} ${USER_ARGS}
