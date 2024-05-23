@@ -1,6 +1,6 @@
 {
   "name": "Linux Router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "slug": "linux-router",
   "description": "Access point for your IoT devives with configurable network interface, DHCP server and much more",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -30,7 +30,7 @@
     "ssid": "",
     "passphrase": "",
     "channel": "0",
-    "address": "192.168.2.1",
+    "address": "192.168.4.1",
     "interface": "",
     "allow_internet": false,
     "hide_ssid": false,

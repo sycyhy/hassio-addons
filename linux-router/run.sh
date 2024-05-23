@@ -75,5 +75,5 @@ EXTRA_ARGS+="-g ${ADDRESS} "
 
 echo "Running"
 
-./lnxrouter -i end0
+./lnxrouter -i end0 --no-dns  --dhcp-dns 1.1.1.1
 
