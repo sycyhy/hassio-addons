@@ -75,5 +75,4 @@ EXTRA_ARGS+="-g ${ADDRESS} "
 
 echo "Running"
 
-./lnxrouter -i end0
-
+./lnxrouter -i end0 -o wlan0
